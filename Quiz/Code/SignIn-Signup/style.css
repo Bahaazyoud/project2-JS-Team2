@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+ 
+}
+
+:root{
+    --main-color1:#023047;
+    --main-color2:#98C1D9;
+    --main-color3:#E5E5E5;
+    --main-color4:#EC8757;
+    --sub-color1:#0D83AE;
+    --sub-color2:#BBF085;
+    --sub-color3:#F24726;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 50px;
+
+}
+
+body.active .circle1{
+    background: var(--main-color4);
+}
+
+body.active .circle2{
+    background: var(--main-color4);
+}
+
+h1{
+    margin: 0;
+    font-weight: bold;
+    
+}
+
+p{
+    font-size: 0.85rem;
+    font-weight: lighter;
+    letter-spacing: 0.09rem;
+    margin: 1rem 0 1.2rem;
+}
+
+span{
+    font-size: 0.9rem;
+}
+
+a{
+    margin: 15px 0;
+    text-decoration: none;
+    color: var(--main-color1);
+}
+
+.social-container{
+    margin: 1rem 0 ;
+}
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 50px;
+    background-color: white;
+}
+
+.container{
+    width: 800px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    max-width: 100%;
+    min-height: 500px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.353) , 0 10px 30px rgba(0, 0, 0, 0.195);
+    
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+ 
+}
+
+
+button{
+border-radius: 20px;
+border: 1px solid var(--main-color2);
+background-color: var(--main-color1);
+color: var(--main-color3);
+font-size: 12px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 100ms ease-in;
+}
+
+body .sign-up-container .sign-up-btn{
+    background-color: var(--main-color4);
+    border: 1px solid;
+}
+
+.overlay-left .btn{
+    border: 1px solid var(--main-color3);
+}
+
+
+
+button:active{
+    transform: scale(0.90);
+}
+
+button.btn{
+    background-color: transparent;
+    border-color: var(--main-color2) ;
+}
+
+input{
+    background-color: var(--main-color3);
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+
+.sign-in-container{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+
+.sign-up-container{
+    left: 0;
+    width: 50%;
+    z-index: -1;
+}
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.overlay {
+	background: var(--main-color1);
+	background: linear-gradient(to left , #0d83AE, #bedede,#e6ceb2 ,  #EC8757);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.sign-up-container button{
+    background-color: var(--main-color4);
+}
+
+.container.active .overlay-right {
+	transform: translateX(20%);
+}
+
+.sign-up-container .social-container a{
+    color: var(--main-color4);
+}
+
+.sign-up-container h1{
+    color: var(--main-color4);
+}
+
+.container.active .sign-in-container{
+    transform: translateX(100%);
+}
+
+.container.active .sign-up-container{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+
+
+.circle1 {
+    background: var(--main-color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(600px at left 100px);
+    transition: .5s;
+    z-index: -1;
+}
+
+.circle2 {
+    background: var(--main-color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(650px at right 600px);
+    transition: .5s;
+    z-index: -1;
+}
+
+
+@keyframes mynewmove {
+    0%,
+    100% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    body{
+        all: initial;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        border-radius: 0;
+        height: 100vh;
+
+    }
+
+    .form-container{
+        width: 100%;
+        top: 20%;
+        height: 50%;
+    }
+
+    .sign-in-container{
+        top: 50%;
+    }
+
+    .sign-up-container {
+        z-index: -1;
+    }
+
+    .overlay{
+        background: linear-gradient(to bottom  , #0d83AE, #bedede,#e6ceb2 ,  #EC8757);
+        width: 100%;
+        height: 200%;
+        left: 0%;
+    }
+
+    .overlay-container {
+        top: 0;
+        left: 0%;
+        width: 100%;
+        height: 50%;
+    }
+
+    .overlay-panel{
+        top: 0%;
+        height: 50%;
+        width: 100%;
+    }
+
+    .overlay-left{
+        transform: translateY(100%);
+    }
+
+    .overlay-right{
+        transform: translateY(0%);
+    }
+
+
+    .sign-in-container.active-media {
+        top: 0%;
+        
+    }
+
+
+
+    .overlay-container.active-media{
+        transform: translateY(100%);
+    }
+
+
+    .overlay.active-media{
+        transform: translateY(-50%);
+    }
+
+    .form-container.active-media{
+        top: 0;
+    }
+
+    .sign-up-container.active-media{
+        z-index: 5;
+        
+    }
+
+}
+
+
+@media (max-width: 343px) {
+    .form{
+        padding: 0px;
+    }
+}

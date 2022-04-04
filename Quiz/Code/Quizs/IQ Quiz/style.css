@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --main-color1:#023047;
+    --main-color2:#98C1D9;
+    --main-color3:#E5E5E5;
+    --main-color4:#EC8757;
+    --sub-color1:#0D83AE;
+    --sub-color2:#BBF085;
+    --sub-color3:#F24726;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 50px;
+    overflow: hidden;
+    background-image: url(imges/Background.png);
+    background-repeat:no-repeat ;
+    background-position: right;
+    background-color: var(--main-color3);
+   
+    
+}
+
+
+
+.main-container{
+border-radius: 20px;
+background-color: var(--main-color2);
+opacity: 0.9;
+width: 70vw;
+height: 80vh;
+position: relative;
+overflow: hidden;
+}
+
+
+.conitaienr-image{
+    display: flex;
+    justify-content: end;
+    right: 0;
+    bottom: 0;
+    position:absolute;
+    height: 40%;
+    overflow: hidden;
+}
+
+
+
+.start-btn .disable-btn{
+    pointer-events: none;
+    transform: translate(0 , 0) scale(0);
+    transition: all 0.5s ease-in;
+}
+
+
+
+.start-btn  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 15%;
+    transform: translate(-50% , -50%) scale(1);
+    transition: all 0.7s ease;
+    
+}
+
+.start-btn  button {
+  font-size: 30px;
+  color: var(--main-color1);
+  background-color: white;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.start-btn  button:after {
+  content: "";
+  background-color: var(--main-color4);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.start-btn  button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+
+
+
+
+.rules-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0);
+    transition: transform 1s ease-in;
+}
+
+
+.rules-container.active{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% , -50%) scale(1);
+    transition: transform 1s ease-out;
+}
+
+
+
+.rules-container header{
+    position: relative;
+    top: 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 0 0 5%;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+   
+    
+}
+
+
+
+.rules-container header .title{
+    font-size: larger;
+    font-weight: bold;
+    padding: 2.5%;
+    color: var(--main-color1);
+    
+}
+
+section{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.info-container{
+    background-color: var(--main-color3);
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;   
+    flex-direction: column;
+    padding: 1%;
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+    border-radius: 10px;
+}
+
+.info-container:hover{
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+
+.info-container .info{
+    
+    letter-spacing: 1%;
+    font-size: larger;
+    font-weight: bolder;
+    width: 100%;
+    color: var(--main-color1);
+}
+
+
+
+
+.rules-container footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+   
+.rules-container footer .button{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+
+
+
+ .btn {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 2% 3%;
+    white-space: nowrap;
+  }
+  
+  .btn:focus {
+    text-decoration: none;
+  }
+  
+ .btn:hover {
+    text-decoration: none;
+  }
+  
+ .btn:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+  }
+  
+ .btn:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+
+
+  .questions-container{
+   
+      position: absolute;
+      background: linear-gradient(to left , #0d83AE, #bedede);
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      height: 70%;
+      transform: translate(-50% , -50%) scale(1);
+      transition: transform 1s ease-in;
+      
+
+  }
+
+  .questions-container header{
+      background-color: var(--main-color3);
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      font-size: 70%;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+
+
+  .questions-container section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+}
+
+.questions-container section .question-text{
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background: var(--main-color1);
+}
+
+
+.answer{
+
+    height: 100%;
+    width: 70%;
+    border-radius: 20px;
+    font-size: larger;
+    margin: 5% 0;
+    color: var(--main-color1);
+    background-color: var(--main-color3);
+    text-align: center;
+}
+
+
+
+.questions-container .answers{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: -10%;
+    
+}
+
+
+
+.first-row{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.second-row{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.questions-container section .question-text  p:nth-child(2){
+    color: var(--main-color4);
+}
+
+
+footer{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+footer .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around ;
+}
+
+.questions-container .answers .answer{ 
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.question-1 {
+    transform: translate(0 , -50%) scale(0);
+	transition: transform 0.6s ease-in;
+  
+}
+
+.question-1.active {
+    transform: translate(-50% , -50% ) scale(1);
+    transition: transform 1s ease-in;
+}
+
+.question-2 {
+    transform: translate(0 , -50%) scale(0);
+	transition: transform 0.6s ease-in;
+  
+}
+
+.question-2.active {
+    transform: translate(-50% , -50% ) scale(1);
+    transition: transform 1s ease-in;
+}
+
+
+.question-3 {
+    transform: translate(0 , -50%) scale(0);
+	transition: transform 0.6s ease-in;
+  
+}
+
+.question-3.active {
+    transform: translate(-50% , -50% ) scale(1);
+    transition: transform 1s ease-in;
+}
+
+.question-4 {
+    transform: translate(0 , -50%) scale(0);
+	transition: transform 0.6s ease-in;
+  
+}
+
+.question-4.active {
+    transform: translate(-50% , -50% ) scale(1);
+    transition: transform 1s ease-in;
+}
+
+.question-5 {
+    transform: translate(0 , -50%) scale(0);
+	transition: transform 0.6s ease-in;
+  
+}
+
+.question-5.active {
+    transform: translate(-50% , -50% ) scale(1);
+    transition: transform 1s ease-in;
+}
+
+.answer:hover{
+    transform:  scale(1.2);
+    transition: transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+
+
+.main-btn  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 15%;
+    transform: translate(-50% , -50%) scale(0);
+    transition: all 0.7s ease;
+   
+    
+}
+
+.main-btn  button {
+  font-size: 30px;
+  color: var(--main-color1);
+  background-color: white;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.main-btn  button:after {
+  content: "";
+  background-color: var(--main-color4);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.main-btn  button:hover:after {
+  top: 0px;
+  left: 0px;
+  
+}
+
+
+.main-btn.active-btn{
+    transform: translate(-50% , -50%) scale(1);
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    
+}
+
+
+@media (max-width: 768px) {
+
+    .main-container{
+        width: 90vw;
+        height: 90vh;
+        border-radius: 0;
+    }
+
+    .rules-container{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .questions-container{
+        width: 100%;
+        height: 100%;
+    }
+
+  .start-btn button {
+    padding: 13px 50px 13px;
+  }
+
+  .main-btn {
+    padding: 12px 50px;
+  }
+
+.questions-container section .question-text{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    height: 20%;
+}
+
+}
+
+
+
+@media (max-width: 430px) {
+    .main-container{
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .questions-container section .question-text{
+        font-size: 1rem;
+        font-weight: bolder;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        background: var(--main-color1);
+        padding: 1%;
+    }
+}

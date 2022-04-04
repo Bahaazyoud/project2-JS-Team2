@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* main */
+
+ :root {
+    /* color */
+    --main-color1: #023047;
+    --main-color2: #98C1D9;
+    --main-color3: #E5E5E5;
+    --main-color4: #EC8757;
+    --sub-color1: #0D83AE;
+    --sub-color2: #BBF085;
+    --sub-color3: #F24726;
+    /*  main Font Family */
+    --main-fontFamily: 'Comic Neue', cursive;
+}
+
+.colorTheme {
+    position: absolute;
+    left: 41%;
+}
+
+.colorChange {
+    position: absolute;
+    top: 30px;
+    font-size: 2em;
+    color: var(--main-color1);
+    right: 15px;
+    width: 100px;
+    background-color: none;
+    height: 50px;
+}
+
+.colorChange ion-icon:nth-child(2) {
+    display: none;
+}
+
+.colorChange.active ion-icon:nth-child(2) {
+    display: block;
+    color: var(--main-color2);
+}
+
+.colorChange.active ion-icon:nth-child(1) {
+    display: none;
+}
+
+body {
+    background-color: var(--main-color3);
+    font-family: "Archivo Black", sans-serif;
+    cursor: none;
+}
+
+.cursor {
+    z-index: 999;
+    position: fixed;
+    transition: .1s;
+    background-image: url(images/curser3-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    width: 90px;
+    height: 90px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: cursor 5s infinite;
+}
+
+
+/* end main */
+
+
+/* background circle */
+
+.circle1 {
+    background: var(--main-color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(650px at left -250px);
+    animation: animation 1s linear infinite;
+    transition: .5s;
+}
+
+.circle2 {
+    background: var(--main-color1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(650px at right 750px);
+    animation: animation 1s linear infinite;
+    transition: .5s;
+}
+
+.circle4 {
+    background: var(--main-color2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(500px at right 600px);
+    animation: animation 1s linear infinite;
+    transition: .5s;
+}
+
+
+/* container // main section //  */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background-color: var(--main-color3);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 2px;
+    align-items: center;
+    transition: .5s;
+    box-shadow: 0px 0px 5px 1px rgb(125, 125, 125);
+}
+
+.container.active {
+    background-color: var(--main-color1);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container.active header {
+    color: var(--main-color3);
+}
+
+header .logo {
+    width: 99px;
+    position: absolute;
+    top: 6px;
+    left: 20px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-weight: 400;
+    color: var(--main-color1);
+}
+
+.container.active header ul li a {
+    color: var(--main-color3);
+}
+
+
+/* content */
+
+.content {
+    position: relative;
+    margin-left: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textBox h2 {
+    color: var(--main-color1);
+    font-size: 2.5em;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+
+.textBox.active h2 {
+    color: var(--main-color3);
+}
+
+.textBox.active1 h2 {
+    color: var(--main-color1);
+}
+
+.content .textBox h2 span {
+    color: var(--main-color4);
+    font-size: 70px;
+    font-weight: bolder;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.content .textBox p {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.textBox.active p {
+    color: var(--main-color3);
+}
+
+
+/* button */
+
+.content .textBox .a1 {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 20px 90px;
+    background-color: var(--main-color1);
+    color: var(--main-color3);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.textBox.active .a1,
+.textBox.active .a2 {
+    background-color: var(--main-color4);
+    color: var(--main-color1);
+}
+
+.textBox .a1:hover,
+.textBox .a2:hover {
+    animation: topbottom .5s linear infinite;
+    color: var(--main-color3);
+    cursor: none;
+    background-color: var(--main-color1);
+}
+
+.textBox.active .a1:hover,
+.textBox.active .a2:hover {
+    animation: topbottom .5s linear infinite;
+    color: var(--main-color1);
+    background-color: var(--main-color2);
+}
+
+.content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.content .imgBox img {
+    max-width: 100%;
+    transition: .2s;
+    animation: topDown 2s linear infinite;
+}
+
+
+/*theme change */
+
+.circle1.active {
+    background: var(--main-color2);
+}
+
+.circle2.active {
+    background: var(--main-color2);
+}
+
+.circle3.active {
+    background: var(--main-color1);
+}
+
+.circle4.active {
+    background: var(--main-color1);
+}
+
+
+/* animation */
+
+@keyframes topbottom {
+    0%,
+    100% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+
+/* end animation */
+
+@media (max-width: 1200px) {
+    .content .imgBox img {
+        max-width: 180%;
+    }
+    .content .textBox p {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content .textBox {
+        margin-left: -72px;
+    }
+    .content .imgBox {
+        max-width: 20%;
+    }
+    .content .textBox p {
+        width: 70%;
+    }
+    .content .imgBox img {
+        max-width: 400%;
+    }
+    header {
+        padding: 20px 24px;
+    }
+}
+
+@media (max-width: 1083px) {
+    .content .imgBox img {
+        max-width: 300%;
+    }
+    .circle1 {
+        clip-path: circle(550px at left -250px);
+    }
+    .circle2 {
+        clip-path: circle(550px at right 750px);
+    }
+    .circle4 {
+        clip-path: circle(400px at right 600px);
+    }
+}
+
+@media (max-width: 950px) {
+    .content .imgBox img {
+        max-width: 270%;
+    }
+    .content .textBox {
+        margin-left: -88px;
+    }
+    header {
+        padding: 20px 11px;
+    }
+    .content .textBox h2 {
+        font-size: 1.4em;
+    }
+    .content .textBox h2 span {
+        font-size: 49px;
+    }
+}
+
+@media (max-width:880px) {
+    .colorChange {
+        margin-right: -20px;
+    }
+    .content .imgBox {
+        width: 552px;
+    }
+}
+
+@media (max-width:791px) {
+    .content .imgBox {
+        width: 430px;
+    }
+    .content .imgBox img {
+        max-width: 300%;
+    }
+}
+
+@media (max-width: 786px) {
+    .content .imgBox img {
+        max-width: 520%;
+    }
+}
+
+@media (max-width: 784px) {
+    .content .textBox p {
+        width: 46%;
+    }
+}
+
+@media (max-width: 660px) {
+    .content {
+        flex-direction: column;
+    }
+    .content .imgBox img {
+        display: none;
+    }
+    .content .textBox {
+        margin-left: 32px;
+    }
+    .content .textBox p {
+        width: 72%;
+        text-align: center;
+    }
+    .circle1 {
+        clip-path: circle(450px at left -250px);
+    }
+    .circle2 {
+        clip-path: circle(450px at right 750px);
+    }
+    .circle4 {
+        clip-path: circle(300px at right 600px);
+    }
+    header {
+        padding: 20px 46px;
+    }
+    .content .textBox .a2 {
+        margin-top: 11px;
+        margin-left: -62px;
+        padding: 20px 181px;
+    }
+    .content .textBox .a1 {
+        margin-top: 20px;
+        margin-left: -62px;
+        padding: 20px 171px;
+    }
+    .content .textBox h2 {
+        font-size: 1.4em;
+        margin-top: 94px;
+    }
+}
+
+@media (max-width:570px) {
+    .content {
+        margin-left: 16px;
+    }
+    .content .textBox p {
+        width: 80%;
+        text-align: center;
+        opacity: 0.7;
+    }
+    .content .textBox .a1 {
+        padding: 20px 114px;
+        margin-left: 50px;
+    }
+    .content .textBox .a2 {
+        margin-top: 11px;
+        padding: 20px 124px;
+        margin-left: 50px;
+    }
+    .content .textBox h2 {
+        font-size: 1.4em;
+        margin-top: 94px;
+    }
+}
+
+@media (max-width:550px) {
+    .content .textBox .a1 {
+        padding: 20px 114px;
+        margin-left: 20px;
+    }
+    .content .textBox .a2 {
+        margin-top: 11px;
+        padding: 20px 124px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:470px) {
+    .content .textBox .a1 {
+        margin-left: 10px;
+    }
+    .content .textBox .a2 {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width:450px) {
+    .content .textBox .a1 {
+        margin-left: 5px;
+    }
+    .content .textBox .a2 {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width:410px) {
+    .content .textBox .a1 {
+        margin-left: 0px;
+    }
+    .content .textBox .a2 {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width:400px) {
+    .content .textBox h2 {
+        font-size: 1.2em;
+    }
+    .content .textBox h2 span {
+        font-size: 31px;
+        text-align: center;
+    }
+    .content .textBox p {
+        text-align: left;
+    }
+    .content .textBox .a1 {
+        margin-left: -18px;
+    }
+    .content .textBox .a2 {
+        margin-left: -18px;
+    }
+}
+
+@media (max-width:360px) {
+    .content .textBox .a1 {
+        margin-left: -30px;
+    }
+    .content .textBox .a2 {
+        margin-left: -30px;
+    }
+}
+
+@media (max-width:345px) {
+    .content .textBox .a1 {
+        margin-left: -10px;
+        padding: 20px 90px;
+    }
+    .content .textBox .a2 {
+        margin-left: -10px;
+        padding: 20px 100px;
+    }
+    .content .textBox h2 {
+        font-size: 18px;
+    }
+    .content .textBox {
+        margin-left: 4px;
+    }
+    .content .textBox p {
+        opacity: .4;
+        font-size: 14px;
+    }
+    .content .textBox h2 span {
+        font-size: 22px;
+    }
+    header {
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width:310px) {
+    .content .textBox .a1 {
+        margin-left: -7px;
+        padding: 15px 90px;
+    }
+    .content .textBox .a2 {
+        margin-left: -7px;
+        padding: 15px 100px;
+    }
+    header {
+        padding: -63px 46px;
+    }
+    .colorChange {
+        margin-right: -66px;
+    }
+    .content .textBox h2 {
+        font-size: 18px;
+    }
+    .content .textBox {
+        margin-left: 4px;
+    }
+    .content .textBox p {
+        opacity: .4;
+        font-size: 14px;
+    }
+    .content .textBox h2 span {
+        font-size: 22px;
+    }
+    header {
+        padding: 20px 16px;
+    }
+}

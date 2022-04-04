@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&family=Pompiere&family=Staatliches&family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="cursor"></div>
+    <section class="container">
+
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+
+        <header>
+            <img class="logo" src="images/logo-removebg-preview.png" alt="">
+
+
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Welcome To BATMN
+                    <br><span>Quiz System</span></h2>
+                <p>As a member of our front-end engineering team you will be responsible for working with product managers and designers on defining new features and leading the development and roll-out of these features into production. Additionally, you
+                    will customize existing features to fit customer needs and cooperate with members of the engineering team and solution architects to properly integrate such feature with our hosted platform.
+                </p>
+                <a href="../SignIn-Signup/index.html" class="a1">SignIn</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/1.png" alt="" class="quiz1" width="100px">
+                <img src="images/1.png" alt="" class="quiz2" width="100px">
+                <img src="images/1.png" alt="" class="quiz3" width="100px">
+                <img src="images/1.png" alt="" class="quiz4" width="1000px">
+                <img src="images/iq.png" class="quiz">
+
+            </div>
+        </div>
+        <div class="colorChange" onclick="change()">
+            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon name="sunny-outline"></ion-icon>
+        </div>
+
+
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function change() {
+            let colorChange = document.querySelector('.colorChange');
+            let container = document.querySelector('.container');
+            let textBox = document.querySelector('.textBox');
+            let c1 = document.querySelector('.circle1');
+            let c2 = document.querySelector('.circle2');
+            let c3 = document.querySelector('.circle3');
+            let c4 = document.querySelector('.circle4');
+
+            let cursor = document.querySelector('.cursor');
+
+            cursor.classList.toggle('active')
+            colorChange.classList.toggle('active');
+            container.classList.toggle('active');
+            textBox.classList.toggle('active');
+            c1.classList.toggle('active');
+            c2.classList.toggle('active');
+            c3.classList.toggle('active');
+            c4.classList.toggle('active');
+        }
+        let container = document.querySelector(".container");
+        let quiz = document.querySelector(".quiz");
+        container.addEventListener("mousemove", function(ele) {
+            let X = ele.pageX;
+            let Y = ele.pageY;
+            quiz.style.transform = 'translate(' + X / 60 + 'px ,' + Y / 60 + 'px)';
+            quiz.style.transform = 'translate(' + X / 100 + 'px ,' + Y / 100 + 'px)';
+            quiz.style.transform = 'translate(' + X / 90 + 'px ,' + Y / 90 + 'px)';
+            quiz.style.transform = 'translate(' + X / 80 + 'px ,' + Y / 80 + 'px)';
+            quiz.style.transform = 'translate(' + X / 70 + 'px ,' + Y / 70 + 'px)';
+            quiz.style.transform = 'translate(' + X / 60 + 'px ,' + Y / 60 + 'px)';
+
+
+        });
+        let container1 = document.querySelector(".container");
+
+        let cursor = document.querySelector('.cursor');
+        document.addEventListener("mousemove", function(e) {
+            let x = e.pageX;
+            let y = e.pageY;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+            cursor.style.display = "block";
+
+        });
+        document.addEventListener("mouseout", function(e) {
+            cursor.style.display = "none";
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --main-color1:#023047;
+    --main-color2:#98C1D9;
+    --main-color3:#E5E5E5;
+    --main-color4:#EC8757;
+    --sub-color1:#0D83AE;
+    --sub-color2:#3F8800;
+    --sub-color3:#F24726;
+}
+
+
+.cscore {
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 50pt;
+}
+
+.lo{
+    width: 90px;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+   
+}
+
+
+#massage{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 52pt;
+    display: inline;
+}
+
+
+#cmassage{
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    font-size: 25pt; 
+}
+
+
+
+body{
+    
+    background-color: var(--main-color3);
+    color: var(--main-color1);
+    transition: 2s;
+    transition-delay: 1s;
+    overflow: hidden;
+    
+    
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 95vh;
+    margin: auto;
+    margin-bottom: 4px;
+    background-color: var(--main-color3);
+    border-radius: 40px;
+    align-items: center;
+    margin-top: 14px;
+    
+   
+
+}
+
+
+.res{
+    width: 80%;
+    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color3);
+}
+
+
+
+.rev{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+    margin-bottom: 5px;
+}
+
+
+
+
+.score{
+    
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+       
+}
+
+
+.msg{
+    
+    width: 100%;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: azure;
+    border-radius: 15px;
+    background-color: var(--main-color1);
+    padding: 15px 25px ;
+    border: none;
+    width: 150px;
+    text-align: center;
+    font-family: 'Cairo', sans-serif; 
+    font-weight: bold;
+    font-size: 15pt;
+    transition: 1s;
+    
+}
+
+
+a:hover{
+    color: var(--main-color1);
+    background-color: white;
+}
+
+
+.result{
+    color: white;
+    width: 300px;
+    height: 300px;
+   background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    font-size: 50pt;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif; 
+
+}
+
+
+    
+
+
+.g{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media  (min-width:481px) and (max-width:768px){
+
+    .cscore {
+        font-size: 20pt;
+        font-weight: bold;
+    }
+
+    .result {
+        
+        width: 200px;
+        height: 200px;  
+    }
+
+    #massage {
+       
+        font-size: 28pt;
+        padding-left: 60px;
+        margin-top: 15px;
+    }
+
+    #cmassage {
+        font-family: 'Cairo', sans-serif;
+        font-weight: bold;
+        font-size: 20pt;
+        text-align: center;
+        padding-right: 30px;
+    }
+
+    .lo {
+        width: 70px;
+       
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        min-height: 80vh;
+        margin: auto;
+        margin-bottom: 4px;
+        background-color: var(--main-color3);
+        border-radius: 40px;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .cscore {
+        font-size: 10pt;
+    }
+
+    .result {
+
+            width: 130px;
+            height: 130px;
+            font-size: 40pt;
+        
+        
+    }
+
+    #massage {
+     
+        font-size: 20pt;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+
+    #cmassage {
+      
+        font-size: 18pt;
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    #emoji{
+    
+            width: 40px;
+            height: 40px;
+            margin-top: 20px;
+        
+    }
+
+    .g {
+        padding-left: 16px;
+    }
+
+    .lo {
+        width: 40px;
+        position: absolute;
+        left: 0px;
+        
+    }
+}

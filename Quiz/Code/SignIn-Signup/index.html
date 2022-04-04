@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in/up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="container" id="container">
+        <div class="sign-up-container form-container">
+            <div class="form">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <span>or use your account for registration</span>
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="email" placeholder="Email">
+                <input type="text" id="password" placeholder="Password">
+                <div id="register" >
+                <button id="sign-up-btn">Sign Up</button>
+            </div>
+            </div>
+        </div>
+        <div class="form-container sign-in-container">
+            <div class="form">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="text" id="email1" placeholder="Type email here">
+                <input type="text" id="password1" placeholder="Type password here">
+                <button id="Signin">Sign In</button>
+            </div>
+            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="btn" id="signIn">sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend</h1>
+                    <p>Enter your personal details and start journy with us</p>
+                    <button class="btn" id="signUp">sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script src="scriptName.js"></script>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Courgette&family=Montserrat+Alternates:wght@100&family=Sansita+Swashed:wght@300&family=Sofia&display=swap"
+        rel="stylesheet">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="result-btn"> <a href="../Score/index.html"> <div>Result button</div></a></div>
+    <div class="cir1">
+        <div class="fcircle1" id="fcircle1"> </div>
+        <div class="scircle1" id="scircle1"> </div>
+    </div>
+   
+    <div class="border1" id="border1">
+        <div class="fcircle2" id="fcircle2"> </div>
+        <div class="scircle2" id="scircle2"> </div>
+        <div class="g1"><img src="Images/welcomegirl.gif" class="girl" id="girl"></div>
+    
+        <img id="logo" class="logo" src="Images/blue.png">
+        <img id="logo1" class="logo1" src="Images/orange.png">
+
+        <div class="dark" onclick="sun">
+        <i onclick="moon" class="fa fa-moon-o" id="moon" style="font-size: 36px"></i>
+        <i onclick="sun" class="material-icons" id="sun" style="font-size: 36px">wb_sunny</i>
+        </div>
+
+        <div class="border2" id="border2">
+            <p class="yourname" id="yourname"><span> Welcome </span> </p>
+            <p class="wtxt" id="wtxt"><span>Thank </span> <span>you </span> <span>for </span> <span> choosing </span>
+                <span>BAT MN! </span><br /><span>This </span> <span>test </span> <span>contains</span>
+                <span>three parts;</span> <span>English 25%,</span> <br /><span>QI 25%,</span>
+                <span> and technical test 50%. </span> <br /><span>You </span> <span>must </span> <span> complete
+                </span>
+                <span>all to get </span> <span> your </span> <span>score.</span> <br /> <span>We wish you the
+                    best.</span>
+            </p>
+        </div>
+            <select class="dropdown1" id="dropdown1" onchange="ebtn()">
+
+                <option value="selquiz">Select the Quiz</option>
+                <option value="english" id="english">English test</option>
+                <option value="iq">IQ test</option>
+                <option value="tec">Technical test</option>
+            </select>
+            <div class="startbtn" id="startbtn">
+                <a href="../Quizs/English Quiz/index.html"><button class="startbtne" id="startbtne">START</button></a>
+                <a href="../Quizs/IQ Quiz/index.html"><button class="startbtniq" id="startbtiq">START</button></a>
+                <a href="../Quizs/Tech Quiz/index.html"><button class="startbtntec" id="startbtntec">START</button></a>
+           </div>
+
+        
+
+
+        <div class="txt1" id="txt1">
+            <p class="englishtxt" id="englishtxt">This test is designed to assess your understanding of English grammar,
+                vocabulary and phrasing.In this test you will find 5 questions in the format of multiple choice and you
+                will have a choice of
+                four possible answers.
+                You will be required to read each question carefully and select the answer that you think is correct. At
+                the end of the test, you will be given an estimation of your current level of English proficiency. </p>
+            <p class="IQtxt" id="IQtxt">In this test will find questions related to numerical reasoning,
+                logical reasoning, verbal intelligence and spatial intelligence.In this test you will find 5 questions
+                in the format of multiple choice and you will have a choice of
+                four possible answers.
+                You will be required to read each question carefully and select the answer that you think is correct. At
+                the end of the test, you will be given an estimation of your current level of English proficiency. </p>
+            <p class="technicaltxt" id="technicaltxt">In this test will find questions related to technical skills HTML
+                ,CSS and JavaScript.In this test you will find 10 questions
+                in the format of multiple choice and you will have a choice of
+                four possible answers.
+                You will be required to read each question carefully and select the answer that you think is correct. At
+                the end of the test, you will be given an estimation of your current level of English proficiency.</p>
+        </div>
+       
+
+    </div>
+
+    <script src="scriptName.js"></script>
+
+</body>
+
+</html>
